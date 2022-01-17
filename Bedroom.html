@@ -68,20 +68,20 @@
     {
       image(Bed_room, 0, 0, 640, 420);
 
-    fill("red");
-    noFill();
-    text("Dog", 65, 76);
-    rect(60,60, 500, 350);
-    stroke("Red");
-    text("Chair", 350, 310);
-    rect(340, 290, 150, 120);
-    
-    text("Chair", 185, 310);
-    rect(180, 290, 150, 120);
-
-    
-    text("Frame", 255, 80);
-    rect(245, 60, 150, 120);
+      if(status != "")
+    {
+        for(i = 0 ; i < objects.length ; i++)
+        {
+            document.getElementById("status").innerHTML = "Objects Detected";
+            fill("red");
+            percent = floor(objects[i].confidence * 100);
+            text(objects[i].label + " " + percent + "%" , objects[i].x , objects[i].y);
+            stroke("red");
+            noFill();
+            rect(objects[i].x, objects[i].y, objects[i].width, objects[i].height); 
+            document.getElementById("objects_dectected").innerHTML = "Ther are 4 big objects in this image and the Device has recognized " + objects.length + " objects";
+        }
+    }
 
     }
 
