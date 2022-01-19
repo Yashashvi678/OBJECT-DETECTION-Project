@@ -30,14 +30,14 @@
      
      <script>
 
-      imge  = ""
+      img  = ""
       status = "";
 
       objects = [];
    
       function preload()
    {
-       imge = loadImage('desk.jpg');
+       img = loadImage('desk.jpg');
    }
     
    function setup()
@@ -51,7 +51,7 @@
 {
     console.log("modelLoaded");
     status = true;
-    objectDetector.detect(imge, gotResult);
+    objectDetector.detect(img, gotResult);
 }
    
 
@@ -70,7 +70,7 @@
    
    function draw()
    {
-       image(imge, 0, 0, 640, 420);
+       image(img, 0, 0, 640, 420);
    
        if(status != "")
     {

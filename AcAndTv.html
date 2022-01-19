@@ -32,20 +32,20 @@
      
      <script>
 
-      imge  = "";
+      img  = "";
       status="";
       objects = [];
    
       function preload()
    {
-       imge = loadImage('Ac&Tv.jpg');
+       img = loadImage('Ac_and_Tv.jpg');
    }
 
    function modelLoaded()
 {
     console.log("modelLoaded");
     status = true;
-    objectDetector.detect(imge, gotResult);
+    objectDetector.detect(img, gotResult);
 }
     
    function setup()
