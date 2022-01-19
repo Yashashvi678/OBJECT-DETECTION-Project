@@ -40,6 +40,13 @@
    {
        imge = loadImage('Ac&Tv.jpg');
    }
+
+   function modelLoaded()
+{
+    console.log("modelLoaded");
+    status = true;
+    objectDetector.detect(imge, gotResult);
+}
     
    function setup()
    {

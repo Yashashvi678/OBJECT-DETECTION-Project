@@ -29,13 +29,13 @@
 
   <script>
 
-    Bed_room = "";
+    img = "";
     status = "";
     objects = [];
 
     function preload()
     {
-      Bed_room = loadImage('bedRoom.jpg');
+      img = loadImage('bedRoom.jpg');
     }
 
     function setup() 
@@ -68,7 +68,7 @@
     }
     function draw()
     {
-      image(Bed_room, 0, 0, 640, 420);
+      image(img, 0, 0, 640, 420);
 
       if(status != "")
     {
